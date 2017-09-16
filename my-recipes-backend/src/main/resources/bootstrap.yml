@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: my-recipes-backend
+  cloud:
+    config:
+      uri: http://config:8888
+      fail-fast: true
+      password: my-recipes-backend
+      username: user
