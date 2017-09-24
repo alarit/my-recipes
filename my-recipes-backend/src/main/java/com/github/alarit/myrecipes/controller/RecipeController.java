@@ -22,9 +22,13 @@ public class RecipeController {
 
 	final Logger log = LoggerFactory.getLogger(getClass());
 	
-	@Autowired
 	private RecipeService recipeService;
 	
+	@Autowired
+	public void setRecipeService(RecipeService recipeService) {
+		this.recipeService = recipeService;
+	}
+
 	@PostMapping
 	public void save(@RequestBody Recipe recipe) {
 		log.info("Saving: " + recipe.getName());

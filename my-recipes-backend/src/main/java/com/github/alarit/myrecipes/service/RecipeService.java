@@ -14,9 +14,13 @@ public class RecipeService {
 
 	final Logger log = LoggerFactory.getLogger(getClass());
 	
-	@Autowired
 	private RecipeRepository recipeRepository;
 	
+	@Autowired
+	public void setRecipeRepository(RecipeRepository recipeRepository) {
+		this.recipeRepository = recipeRepository;
+	}
+
 	public Recipe findById(final String id) {
 		return recipeRepository.findOneById(id);
 	}
@@ -32,6 +36,11 @@ public class RecipeService {
 	
 	public Recipe save(final Recipe r) {
 		Assert.notNull(r, "Recipe cannot be null");
+		
+		if(r.getId().isEmpty()) {
+			r.setId(null);
+		}
+		
 		return recipeRepository.save(r);
 	}
 	

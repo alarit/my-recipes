@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.center{
+	text-align: center;
+}
+
+.footer{
+	position : absolute;
+  	bottom : 0;
+  	height : 20px;
+  	margin-top : 20px;
+}
+
+.mainMenu{
+	margin-top: 50px;
+}
+
+.mainMenu div{
+	margin-top: 10px;
+}
