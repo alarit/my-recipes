@@ -1,16 +1,15 @@
 spring:
   application:
     name: my-recipes-backend
+  data:
+    mongodb:
+      uri: mongodb://recipe-usr:recipe-pwd@mongodb/myrecipes-db     
   cloud:
     config:
       uri: http://config:8888
       fail-fast: true
       password: my-recipes-backend
       username: user
-  spring:
-    data:
-      mongodb:
-        uri: mongodb://recipe-usr:recipe-pwd@mongodb/myrecipes-db     
 
 security:
   basic:
