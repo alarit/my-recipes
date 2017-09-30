@@ -7,12 +7,10 @@ spring:
       fail-fast: true
       password: my-recipes-backend
       username: user
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: myrecipe
-      
+  spring:
+    data:
+      mongodb:
+        uri: mongodb://recipe-usr:recipe-pwd@mongodb/myrecipes-db     
 
 security:
   basic:
@@ -22,4 +20,4 @@ management:
   security:
     enabled:false
 
-#spring.data.mongodb.uri=mongodb://recipe-usr:recipe-pwd@mongodb/myrecipes-db
+#
