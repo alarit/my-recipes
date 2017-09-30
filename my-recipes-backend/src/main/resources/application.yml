@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: my-recipes-backend
+  cloud:
+    config:
+      uri: http://config:8888
+      fail-fast: true
+      password: my-recipes-backend
+      username: user
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: myrecipe
+      
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled:false
+
+#spring.data.mongodb.uri=mongodb://recipe-usr:recipe-pwd@mongodb/myrecipes-db

@@ -3,10 +3,11 @@ var recipeController = new function(){
 	this.recipesMap = {};
 	this.recipeId = '';
 	
-	this.initAutocomplete = function(){
+	this.initApp = function(){
+		recipeService.loadAllRecipes();
+		
 		$('.typeahead').typeahead({	
 			source: function (word, process) {
-				var map = {}
 				var recipes = [];
 				var response = [];
 				
@@ -63,5 +64,5 @@ var recipeController = new function(){
 };
 	
 $(function() {
-	 recipeController.initAutocomplete();
+	 recipeController.initApp();
 });
