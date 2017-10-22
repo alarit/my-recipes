@@ -3,7 +3,10 @@ spring:
     name: my-recipes-backend
   data:
     mongodb:
-      uri: mongodb://recipe-usr:recipe-pwd@mongodb/myrecipes-db     
+      host: localhost
+      port: 27017
+      database: myrecipe
+#      uri: mongodb://recipe-usr:recipe-pwd@mongodb/myrecipes-db     
   cloud:
     config:
       uri: http://config:8888
